@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+  }
+
+
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+
+body.dark-mode #projects,
+body.dark-mode #resume {
+  background-color: #1e1e1e; /* Dark mode version */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+  font-weight: bold;
+ 
+}
+
+
+body.dark-mode .carousel img {
+    background-color: #222;
+}
+
+
+body.dark-mode .project-card {
+    background-color: #6e6969;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  }
+
+
+  body.dark-mode .project-card p {
+    
+    color: #f1f1f1;
+  
+  }
+
+
+  body.dark-mode header {
+    
+    background-color:#6e6969;
+  
+  }
+
+
+
+
+
+  a:hover {
+    color: #e74c3c;
+  }
+  
+
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+
+
+
+  
+  .project {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .project h3 {
+    margin-bottom: 10px;
+  }
+  
+  .project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .carousel {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:whitesmoke;
+  }
+  
+  .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 40px;
+    display: none;
+    z-index: 1;
+  }
+  
+  .carousel img.active {
+    display: block;
+    z-index: 1;
+  }
+  
+  .carousel button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffb6c1;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+  }
+  
+  .carousel button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.1);
+  }
+  
+  .carousel button::before {
+    content: "🐾";
+    display: block;
+    font-size: 1.2rem;
+  }
+  
+ 
+  .resume-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .resume-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .btn-download {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-download:hover {
+    background-color: #2980b9;
+  }
+  
+  .resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .resume-item {
+    margin-bottom: 40px;
+  }
+  
+  .resume-item h3 {
+    color: #34495e;
+    font-size: 1.5rem;
+  }
+  
+  .company {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .resume-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  
+
+  #projects {
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .project-grid {
+ 
+
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior:smooth;
+  }
+  
+  .project-card {
+
+    flex: 0 0 300px; /* Each card fixed width */
+    background-color: #eee;
+    color: #222;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    transform: scale(1.03);
+
+  }
+  
+  .project-card img {
+   
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .project-card h3 {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .project-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #4f46e5;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .project-card a:hover {
+    background: #3730a3;
+  }
+
+  .project-scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+  
+  .project-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+
+  
+
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.3s;
+  }
+  
+  .scroll-btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+  
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .project {
+      font-size: 1.1rem;
+    }
+  }
+  

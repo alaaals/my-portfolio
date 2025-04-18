@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header>
+
+    <button id="theme-toggle">Toggle Dark Mode</button>
+
+    <div class="container">
+      <h1>Alaa Al Shaba</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a computer scientist with experience in web and app development. I love building clean, responsive, and accessible web applications.</p>
+    </div>
+  </section>
+
+
+   <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-scroll-wrapper">
+      <button class="scroll-btn left" onclick="scrollProjects('left')">❮</button>
+      
+      <div class="project-grid" id="projectScroll">
+        <!-- your 7 project cards here (no changes needed) -->
+        <div class="project-card">
+            <img src="thumbnails/1.png" alt="Game 1 Preview">
+            <h3>🎮 Alien Breakout in Space</h3>
+            <p>Bounce the ball off your paddle to hit UFOs floating in space. Inspired by the classic Breakout, but with a cosmic twist!</p>
+            <a href="https://alaaals.github.io/ball-game/" target="_blank">View Project</a>
+          </div>
+
+
+
+          <div class="project-card">
+            <img src="thumbnails/2.png" alt="Puzzle Preview">
+            <h3>🎮 Fly Falcon, Dodge & Collect</h3>
+            <p>Soar through the skies as a falcon! Collect coins to boost your score while dodging obstacles by moving left or right..</p>
+            <a href="https://alaaals.github.io/falcon-fly/" target="_blank">View Project</a>
+          </div>
+    
+          <div class="project-card">
+            <img src="thumbnails/3.png" alt="Puzzle Preview">
+            <h3>🎮 Guide Robot with Arrows</h3>
+            <p>Control a robot using directional arrows and lead it safely to the finish door. Plan your moves and avoid tricky traps!</p>
+            <a href="https://alaaals.github.io/robots/" target="_blank">View Project</a>
+          </div>
+    
+    
+          <div class="project-card">
+            <img src="thumbnails/4.png" alt="Puzzle Preview">
+            <h3>🎮 Build Your Own Solar System</h3>
+            <p>Design your dream solar system! Add stars, planets, moons, and asteroids — all customizable to your imagination.</p>
+            <a href="https://alaaals.github.io/solar-system/" target="_blank">View Project</a>
+          </div>
+    
+    
+          <div class="project-card">
+            <img src="thumbnails/5.png" alt="Puzzle Preview">
+            <h3>🎮 VR Coin Hunt & Car Show</h3>
+            <p>Walk around a virtual world collecting coins, then visit a car exhibition to spend them. Fully immersive VR experience!</p>
+            <a href="https://alaaals.github.io/VR-game/" target="_blank">View Project</a>
+          </div>
+    
+    
+          <div class="project-card">
+            <img src="thumbnails/6.png" alt="Puzzle Preview">
+            <h3>🎮 Stack Blocks in AR World</h3>
+            <p>Using augmented reality, stack up colorful blocks in your real-world environment. Balance is key!</p>
+            <a href="https://alaaals.github.io/AR-game/" target="_blank">View Project</a>
+          </div>
+    
+    
+          <div class="project-card">
+            <img src="thumbnailS/7.png" alt="Puzzle Preview">
+            <h3>🎮 Alien Shootout Countdown Challenge</h3>
+            <p>Shoot down as many aliens as you can before time runs out. Fast-paced, timed challenge with escalating difficulty!</p>
+            <a href="https://alaaals.github.io/alien-invasion/" target="_blank">View Project</a>
+          </div>
+      </div>
+  
+      <button class="scroll-btn right" onclick="scrollProjects('right')">❯</button>
+    </div>
+  </section>
+  
+
+  <section id="carousel">
+
+
+    <div class="carousel">
+        <h2>Carousel of My Cat Ash</h2>
+        <img src="images/cat1.JPG" alt="img" class="active">
+        <img src="images/cat2.JPG" alt="img2">
+        <img src="images/cat3.JPG" alt="img3">
+        <img src="images/cat4.JPG" alt="img4">
+        <img src="images/cat5.JPG" alt="img5">
+        <img src="images/cat6.JPG" alt="img6">
+        <button onclick="nextSlide()">Meow</button>
+    </div>
+
+  </section>
+
+  <section id="resume" class="resume-section">
+    <div class="container">
+      <h2>My Resume</h2>
+  
+      <a href="images/resume.pdf" download class="btn-download">Download Resume</a>
+  
+      <div class="resume-content">
+       
+  
+        <div class="resume-item">
+          <h3>Computer Science Student</h3>
+          <p class="company">New York University in Abu Dhabi | 2020 – 2024</p>
+          <ul>
+            <li>Studied software engineering, databases, networks, and AI.</li>
+            <li>Capstone: Federated Learning Encryption using TenSEAL & CrypTen.</li>
+            <li>Built full-stack apps using React, Node.js, and MongoDB.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+            <h3>Front-End Developer Intern</h3>
+            <p class="company">ADNOC | June 2024 – August 2024</p>
+            <ul>
+              <li>Worked on responsive UI with HTML, CSS, and JavaScript.</li>
+              <li>Used Microsoft BI tools for reporting dashboards.</li>
+              <li>Collaborated with design team to improve UX.</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Feel free to reach out via <a href="mailto:alaa2002alshaba@gmail.com">email</a> or connect on <a href="/www.linkedin.com/in/alaa-al-shaba-863424233">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Alaa Al Shaba</p>
+    </div>
+  </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
